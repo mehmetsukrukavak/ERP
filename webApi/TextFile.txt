@@ -1,0 +1,33 @@
+﻿create TABLE Personel
+(	Id bigint PRIMARY KEY IDENTITY(1,1) NOT null,
+Ad varchar(max),
+Soyad varchar(max),
+ IseBaslamaTarihi datetime,
+KalanİzinGunu int)
+
+CREATE TABLE Izin
+(
+Id bigint PRIMARY KEY IDENTITY(1,1),
+PersonelId bigint NOT null,
+IzinBaslamaTarihi datetime,
+IzinBitisTarihi datetime
+
+)
+
+
+INSERT INTO dbo.Personel
+(
+  
+    Ad,
+    Soyad,
+    IseBaslamaTarihi,
+    KalanİzinGunu
+)
+VALUES
+(
+    
+    'Mehmet', -- Ad - varchar
+    'Kavak', -- Soyad - varchar
+    '2019-07-10 13:38:34', -- IseBaslamaTarihi - datetime
+    14 -- KalanİzinGunu - bigint
+)
